@@ -1,6 +1,6 @@
 # ✦ `Portfólio Pessoal`
 
-<img src="static/img/logo.png" alt="Logo Julia" width="120px"/>
+<img src="static/img/logo.png" alt="Logo Julia" width="300px"/>
 
 > Este é um projeto de portfólio pessoal interativo. A aplicação centraliza meus projetos comerciais e acadêmicos, atuando como um laboratório contínuo de experimentação em engenharia de software frontend, UI/UX, arquitetura estática e otimização de performance.
 
