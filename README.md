@@ -1,6 +1,6 @@
 # ✦ `Portfólio Pessoal`
 
-<img src="static/img/icone.png" alt="Logo Julia" width="120px"/>
+<img src="static/img/logo.png" alt="Logo Julia" width="120px"/>
 
 > Este é um projeto de portfólio pessoal interativo. A aplicação centraliza meus projetos comerciais e acadêmicos, atuando como um laboratório contínuo de experimentação em engenharia de software frontend, UI/UX, arquitetura estática e otimização de performance.
 
@@ -25,7 +25,7 @@ A arquitetura do projeto foi projetada para unificar uma estética retrô marcan
 | :---: | :---: |
 | <img src="static/img/telas/dev-id.jpg" alt="Tela Apresentação" width="500"/> | <img src="static/img/telas/sobre.jpg" alt="Tela Sobre" width="500"/> | 
 | Tela de Projetos | Tela de Contato |
-| <img src="static/img/telas/projetos.jpg" alt="Tela de Projetos" width="500"/> | <img src="static/img/telas/conato.jpg" alt="Tela de Contato" width="500"/> | 
+| <img src="static/img/telas/projetos.jpg" alt="Tela de Projetos" width="500"/> | <img src="static/img/telas/contato.jpg" alt="Tela de Contato" width="500"/> | 
 
 ---
 
