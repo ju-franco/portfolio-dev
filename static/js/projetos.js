@@ -52,6 +52,15 @@ const meusProjetos = [
         // Organizado dentro da subpasta matsuno
         imagens: ["matsuno/matsuno_inicio.jpg", "matsuno/matsuno_sobre.jpg", "matsuno/matsuno_produtos.jpg", "matsuno/matsuno_parceiros.jpg"], 
         tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Fins Acadêmicos"]
+    },
+    {
+        id: "07", 
+        titulo: "Meu Portfolio Interativo",
+        descricao: "Plataforma web  que centraliza meus projetos e identidade visual. Desenvolvida em arquitetura estática pura com manipulação nativa do DOM, persistência de estados (Modo Claro/Escuro), filtros de texturização procedural SVG e comunicação assíncrona.",
+        linkCodigo: "https://github.com/ju-franco/portfolio-dev",
+        linkDemo: "https://ju-franco.github.io/portfolio-dev/",
+        imagens: ["telas/dev-id.jpg", "telas/sobre.jpg", "telas/projetos.jpg", "telas/contato.jpg"], 
+        tags: ["HTML5", "CSS3", "JavaScript", "SVG Filter", "Fetch API", "UX/UI"]
     }
 ];
 
