@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ✦ ` Portfólio Pessoal`
 
 <img src="img/logo.png" alt="Logo Julia" width="250px"/>
@@ -54,3 +55,6 @@ portfolio/
 │   ├── contato.html           # View do terminal de comunicação e conexões externas
 │   └── index.html             # View principal (Painel Hero, Sobre Mim, Projetos e Janela Rodapé)
 └── app.py                     # Arquivo backend e servidor de rotas (Flask)
+=======
+# portfolio-dev
+>>>>>>> 6cbc8e7a0f0b41d0003aa69862f0b4794f97f997
