@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia Franco | Contato</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/icone.png') }}" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Orbitron:wght@700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="overlay-texture"></div>
+
+    <header class="navbar-sys">
+        <div class="navbar-wrapper">
+            <a href="{{ url_for('home') }}" class="logo-sys">&gt;  julia_franco_dev</a>
+            <nav class="nav-links-sys">
+                <a href="{{ url_for('home') }}#about" class="nav-item">/perfil</a>
+                <a href="{{ url_for('home') }}#projects" class="nav-item">/projetos</a>
+                
+                <button class="theme-toggle-btn" title="Alternar Modo de Cor">
+                    <i class='bx bx-moon'></i>
+                </button>
+
+                <a href="{{ url_for('home') }}" class="nav-item sys-btn-contato">/home</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="about-section" style="padding-top: 4rem;">
+            <div class="brutalist-card profile-card" style="grid-template-columns: 1fr;">
+                
+                <div class="card-header">
+                    <span class="sys-folder font-pixel"><span class="star-deco">✦</span> CONTATE_ME.EXE</span>
+                    <div class="header-controls">
+                        <i class='bx bx-minus'></i>
+                        <i class='bx bx-square'></i>
+                        <i class='bx bx-x'></i> 
+                    </div>
+                </div>
+                
+                <div class="profile-container" style="gap: 3rem; align-items: start;">
+                    
+                    <div class="profile-main-info">
+                        <h3 class="font-pixel section-subtitle">/canais_de_contato</h3>
+                        <p class="about-text" style="margin-bottom: 2rem;">
+                            Vamos desenvolver algo juntos? Escolha a forma de comunicação de sua preferência para iniciar o projeto:                      
+                        </p>
+
+                        <div class="profile-side-stack" style="padding: 0;">
+                            <div class="icon-tech-grid" style="grid-template-columns: 1fr; gap: 1rem;">
+                                
+                                <a href="mailto:juliafranco093@gmail.com" class="tech-icon-box tag-acid" style="justify-content: flex-start; gap: 1rem; padding: 1rem; width: 100%; text-decoration: none;">
+                                    <i class='bx bx-envelope'></i>
+                                    <span class="tech-name" style="font-size: 0.8rem;">juliafranco093@gmail.com</span>
+                                </a>
+
+                                <a href="https://github.com/ju-franco" target="_blank" class="tech-icon-box tag-blue" style="justify-content: flex-start; gap: 1rem; padding: 1rem; width: 100%; text-decoration: none;">
+                                    <i class='bx bxl-github'></i>
+                                    <span class="tech-name" style="font-size: 0.8rem;">github.com/ju-franco</span>
+                                </a>
+
+                                <a href="https://linkedin.com/in/juliamrfranco" target="_blank" class="tech-icon-box tag-pink" style="justify-content: flex-start; gap: 1rem; padding: 1rem; width: 100%; text-decoration: none;">
+                                    <i class='bx bxl-linkedin-square'></i>
+                                    <span class="tech-name" style="font-size: 0.8rem;">linkedin.com/in/juliamrfranco</span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-side-stack" style="background: transparent; border: none; padding: 0; box-shadow: none;">
+                        <h3 class="font-pixel section-subtitle">/enviar_mensagem</h3>
+                        
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                            {% if messages %}
+                                {% for category, message in messages %}
+                                    <div class="flash-banner font-pixel alert-{{ category }}" style="margin-bottom: 1.5rem; padding: 1rem; border: var(--border-width) solid var(--border-color); background: #FEF08A; font-size: 0.7rem; color: #000; text-align: left; box-shadow: var(--pixel-shadow, 4px 4px 0px #000);">
+                                        &gt;&gt; {{ message }}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+
+                        <form action="{{ url_for('contato') }}" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem;">
+                            
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <label class="font-pixel" style="font-size: 0.65rem; color: var(--cor-subtle);">NOME:</label>
+                                <input type="text" name="nome" placeholder="ex: Julia Franco" required 
+                                       style="width: 100%; padding: 0.8rem; border: var(--border-width) solid var(--border-color); background-color: var(--cor-fundo); color: var(--cor-prime); font-family: var(--font-mono); outline: none;">
+                            </div>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <label class="font-pixel" style="font-size: 0.65rem; color: var(--cor-subtle);">EMAIL:</label>
+                                <input type="email" name="email" placeholder="ex: nome@gmail.com" required 
+                                       style="width: 100%; padding: 0.8rem; border: var(--border-width) solid var(--border-color); background-color: var(--cor-fundo); color: var(--cor-prime); font-family: var(--font-mono); outline: none;">
+                            </div>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <label class="font-pixel" style="font-size: 0.65rem; color: var(--cor-subtle);">MENSAGEM:</label>
+                                <textarea name="mensagem" rows="4" placeholder="Sua mensagem aqui..." required 
+                                          style="width: 100%; padding: 0.8rem; border: var(--border-width) solid var(--border-color); background-color: var(--cor-fundo); color: var(--cor-prime); font-family: var(--font-mono); resize: vertical; outline: none;"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="tech-icon-box tag-pink" 
+                                    style="width: 100%; padding: 1rem; font-family: var(--font-pixel); font-size: 0.7rem; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 0.5rem; font-weight: bold; border: var(--border-width) solid var(--border-color); box-shadow: var(--pixel-shadow, 4px 4px 0px #000);">
+                                <i class='bx bx-terminal'></i> ENVIAR_MENSAGEM
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="sys-footer-y2k">
+        <div class="footer-wrapper">
+        <div class="footer-window">
+          <div class="footer-header">
+            <span class="font-pixel">JULIA_FRANCO</span>
+
+            <div class="footer-controls">
+              <span>_</span>
+              <span>□</span>
+              <span>✕</span>
+            </div>
+          </div>
+
+          <div class="footer-content">
+            <div class="footer-logo">
+              <span class="footer-glow">✦ JULIA_FRANCO_DEV ✦</span>
+            </div>
+
+            <p class="footer-text">
+              Desenvolvedora de Sistemas • UI/UX • Web Design
+            </p>
+
+            <div class="footer-links">
+              <a href="https://github.com/ju-franco" target="_blank">
+                <i class="bx bxl-github"></i>
+              </a>
+
+              <a href="https://linkedin.com/in/juliamrfranco" target="_blank">
+                <i class="bx bxl-linkedin"></i>
+              </a>
+
+              <a href="{{ url_for('contato') }}">
+                <i class="bx bx-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

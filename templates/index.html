@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Julia Franco | Portfolio Pessoal</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/icone.png') }}" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Orbitron:wght@700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="overlay-texture"></div>
+
+    <header class="navbar-sys">
+      <div class="navbar-wrapper">
+        <a href="#" class="logo-sys">&gt; julia_franco_dev</a>
+        <nav class="nav-links-sys">
+          <a href="#about" class="nav-item">/perfil</a>
+          <a href="#projects" class="nav-item">/projetos</a>
+
+          <button class="theme-toggle-btn" title="Alternar Modo de Cor">
+            <i class="bx bx-moon"></i>
+          </button>
+
+          <a href="{{ url_for('contato') }}" class="nav-item sys-btn-contato"
+            >CONTATO</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section id="home" class="hero-section">
+        <div class="hero-grid">
+          <div class="identity-box">
+            <span class="sys-id">DEV.ID</span>
+            <h1 class="main-title">Desenvolvedora de Sistemas</h1>
+            <div class="glitch-wrapper">
+              <div class="glitch font-pixel" data-text="Julia Franco">
+                Julia Franco<span class="blink">|</span>
+              </div>
+            </div>
+            <p class="sys-description">
+              Desenvolvedora Front-end, entusiasta de design gráfico e UI/UX.
+            </p>
+          </div>
+
+          <div class="profile-image-container">
+            <div class="image-window-header">
+              <span class="font-pixel">JULIA.PNG</span>
+              <div class="header-decorations"><span>_</span><span>X</span></div>
+            </div>
+            <div class="image-frame">
+              <img
+                src="{{ url_for('static', filename='img/julia.png') }}"
+                alt="Julia de Melo Romo Franco"
+                class="julia-photo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="brutalist-card profile-card">
+          <div class="card-header">
+            <span class="sys-folder font-pixel"
+              ><span class="star-deco">✦</span> INFORMACOES_SOBRE_MIM</span
+            >
+            <div class="header-controls">
+              <i class="bx bx-minus"></i>
+              <i class="bx bx-square"></i>
+              <i class="bx bx-x"></i>
+            </div>
+          </div>
+
+          <div class="profile-container">
+            <div class="profile-main-info">
+              <h3 class="font-pixel section-subtitle">/sobre_mim</h3>
+              <p class="about-text">
+                Desenvolvedora de sistemas e designer de interfaces focada em
+                criar experiências digitais marcantes e responsivas. Unindo a
+                precisão da engenharia de software com a estética visual, busco
+                transformar códigos complexos em layouts limpos, dinâmicos e
+                funcionais.
+              </p>
+
+              <h3 class="font-pixel section-subtitle" style="margin-top: 2rem">
+                /formacao_academica
+              </h3>
+
+              <div class="timeline-container">
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <span class="timeline-date font-pixel"
+                      >2026 - CURSANDO</span
+                    >
+                    <h4>FATEC Campinas</h4>
+                    <p class="timeline-desc">
+                      Graduação em Análise e Desenvolvimento de Sistemas
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <span class="timeline-date font-pixel">2023 - 2025</span>
+                    <h4>ETEC de Hortolândia</h4>
+                    <p class="timeline-desc">
+                      Ensino Médio Integrado ao Técnico em Desenvolvimento de
+                      Sistemas
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-side-stack">
+              <h3 class="font-pixel section-subtitle">/tecnologias</h3>
+
+              <div class="icon-tech-grid">
+                <div class="tech-icon-box tag-acid" title="HTML5">
+                  <i class="bx bxl-html5"></i>
+                  <span class="tech-name">HTML5</span>
+                </div>
+                <div class="tech-icon-box tag-acid" title="CSS3">
+                  <i class="bx bxl-css3"></i>
+                  <span class="tech-name">CSS3</span>
+                </div>
+                <div class="tech-icon-box tag-acid" title="JavaScript">
+                  <i class="bx bxl-javascript"></i>
+                  <span class="tech-name">JS</span>
+                </div>
+
+                <div class="tech-icon-box tag-blue" title="React">
+                  <i class="bx bxl-react"></i>
+                  <span class="tech-name">REACT</span>
+                </div>
+                <div class="tech-icon-box tag-blue" title="React Native">
+                  <i class="bx bxl-react"></i>
+                  <span class="tech-name">NATIVE</span>
+                </div>
+                <div class="tech-icon-box tag-blue" title="TypeScript">
+                  <i class="bx bxl-typescript"></i>
+                  <span class="tech-name">TS</span>
+                </div>
+                <div class="tech-icon-box tag-blue" title="Node.js">
+                  <i class="bx bxl-nodejs"></i>
+                  <span class="tech-name">NODE</span>
+                </div>
+
+                <div class="tech-icon-box" title="Python,">
+                  <i class="bx bxl-python"></i>
+                  <span class="tech-name">PYTHON</span>
+                </div>
+                <div class="tech-icon-box" title="C Language">
+                  <i class="bx bx-code-block"></i>
+                  <span class="tech-name">C</span>
+                </div>
+                <div class="tech-icon-box" title="C# Language">
+                  <i class="bx bx-code"></i>
+                  <span class="tech-name">C#</span>
+                </div>
+                <div class="tech-icon-box" title="MySQL">
+                  <i class="bx bxs-data"></i>
+                  <span class="tech-name">MYSQL</span>
+                </div>
+                <div class="tech-icon-box" title="Firebase">
+                  <i class="bx bxl-firebase"></i>
+                  <span class="tech-name">FIREBASE</span>
+                </div>
+                <div class="tech-icon-box" title="Git & GitHub">
+                  <i class="bx bxl-git"></i>
+                  <span class="tech-name">GIT</span>
+                </div>
+                <div class="tech-icon-box tag-pink" title="Figma">
+                  <i class="bx bxl-figma"></i>
+                  <span class="tech-name">FIGMA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-section">
+        <h2 class="sys-section-title font-pixel">
+          PROJETOS<span class="blink">|</span>
+        </h2>
+
+        <div class="projects-grid" id="container-projetos"></div>
+      </section>
+    </main>
+
+    <footer class="sys-footer-y2k">
+        <div class="footer-wrapper">
+        <div class="footer-window">
+          <div class="footer-header">
+            <span class="font-pixel">JULIA_FRANCO</span>
+
+            <div class="footer-controls">
+              <span>_</span>
+              <span>□</span>
+              <span>✕</span>
+            </div>
+          </div>
+
+          <div class="footer-content">
+            <div class="footer-logo">
+              <span class="footer-glow">✦ JULIA_FRANCO_DEV ✦</span>
+            </div>
+
+            <p class="footer-text">
+              Desenvolvedora de Sistemas • UI/UX • Web Design
+            </p>
+
+            <div class="footer-links">
+              <a href="https://github.com/ju-franco" target="_blank">
+                <i class="bx bxl-github"></i>
+              </a>
+
+              <a href="https://linkedin.com/in/juliamrfranco" target="_blank">
+                <i class="bx bxl-linkedin"></i>
+              </a>
+
+              <a href="{{ url_for('contato') }}">
+                <i class="bx bx-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+    <script
+      type="module"
+      src="{{ url_for('static', filename='js/main.js') }}"
+    ></script>
+  </body>
+</html>
