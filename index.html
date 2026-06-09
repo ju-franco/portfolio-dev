@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Julia Franco | Portfolio Pessoal</title>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='img/icone.png') }}" type="image/png">
+    <link rel="shortcut icon" href="static/img/icone.png" type="image/png">    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,10 +15,7 @@
       rel="stylesheet"
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}"
-    />
+    <link rel="stylesheet" href="static/css/style.css">
   </head>
   <body>
     <div class="overlay-texture"></div>
@@ -34,7 +31,7 @@
             <i class="bx bx-moon"></i>
           </button>
 
-          <a href="{{ url_for('contato') }}" class="nav-item sys-btn-contato"
+          <a href="contato.html" class="nav-item sys-btn-contato"
             >CONTATO</a
           >
         </nav>
@@ -64,8 +61,8 @@
             </div>
             <div class="image-frame">
               <img
-                src="{{ url_for('static', filename='img/julia.png') }}"
-                alt="Julia de Melo Romo Franco"
+                src="static/img/julia.png"
+                alt="Julia Franco"
                 class="julia-photo"
               />
             </div>
@@ -237,7 +234,7 @@
                 <i class="bx bxl-linkedin"></i>
               </a>
 
-              <a href="{{ url_for('contato') }}">
+              <a href="contato.html">
                 <i class="bx bx-envelope"></i>
               </a>
             </div>
@@ -245,10 +242,7 @@
         </div>
       </footer>
 
-
-    <script
-      type="module"
-      src="{{ url_for('static', filename='js/main.js') }}"
-    ></script>
+    <script src="static/js/projetos.js"></script> 
+    <script src="static/js/main.js"></script>
   </body>
 </html>

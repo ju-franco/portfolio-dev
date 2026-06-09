@@ -6,8 +6,7 @@ const meusProjetos = [
         linkCodigo: "https://github.com/ju-franco/docuras-enlaces", 
         linkDemo: "https://docurasenlaces.com.br/",
         imagens: ["docuras/docuras_index.jpg", "docuras/docuras_cardapio.jpg", "docuras/docuras_servicos.jpg", "docuras/docuras_galeria.jpg"],
-        tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Isotope API", "WhatsApp API", "Projeto Comercial"],
-        corAccent: "var(--cor-neon-rosa)"
+        tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Isotope API", "WhatsApp API", "Projeto Comercial"]
     },
     {
         id: "02",
@@ -16,8 +15,7 @@ const meusProjetos = [
         linkCodigo: "https://github.com/ju-franco/glauks-web", 
         linkDemo: "#",
         imagens: ["glauks_web/glauks_addlivro.png", "glauks_web/glauks_catalogo.png", "glauks_web/glauks_emprestimos.png",], 
-        tags: ["React", "TypeScript", "Vite", "Firebase", "Fins Acadêmicos"],
-        corAccent: "var(--cor-neon-blue)" 
+        tags: ["React", "TypeScript", "Vite", "Firebase", "Fins Acadêmicos"]
     },
     {
         id: "03",
@@ -26,8 +24,7 @@ const meusProjetos = [
         linkCodigo: "https://github.com/ju-franco/glauks-mobile", 
         linkDemo: "#",
         imagens: ["glauks_mobile.jpg"], 
-        tags: ["React Native", "TypeScript", "Expo Go", "Firebase", "Mobile-First", "Fins Acadêmicos"],
-        corAccent: "var(--cor-acid)"
+        tags: ["React Native", "TypeScript", "Expo Go", "Firebase", "Mobile-First", "Fins Acadêmicos"]
     },
     {
         id: "04",
@@ -35,8 +32,7 @@ const meusProjetos = [
         descricao: "Plataforma fanmade de catálogo e guia interativo com barras de progresso dinâmicas de coleção, sincronização em nuvem e chat com inteligência artificial integrado via Groq API.",
         linkCodigo: "https://github.com/ju-franco/heartopia-catalogo", 
         imagens: ["heartopia/heartopia_login.jpg", "heartopia/heartopia_progresso.jpg", "heartopia/heartopia_catalogo.jpg", "heartopia/heartopia_conquistas.jpg"], 
-        tags: ["React", "Vite", "Groq API", "Firebase", "GitHub Pages", "Projeto de Aprendizagem"],
-        corAccent: "var(--cor-neon-rosa)" 
+        tags: ["React", "Vite", "Groq API", "Firebase", "GitHub Pages", "Projeto de Aprendizagem"]
     },
     {
         id: "05",
@@ -45,8 +41,7 @@ const meusProjetos = [
         linkCodigo: "https://github.com/ju-franco/vulpi", 
         linkDemo: "#",
         imagens: ["vulpi/vulpi_catalogo.jpg", "vulpi/vulpi_cadastro-item.jpg", "vulpi/vulpi_forum.jpg"], 
-        tags: ["React", "Vite", "CSS-in-JS", "Firestore", "Projeto Colaborativo"],
-        corAccent: "var(--cor-neon-blue)" 
+        tags: ["React", "Vite", "CSS-in-JS", "Firestore", "Projeto Colaborativo"]
     },
     {
         id: "06",
@@ -56,9 +51,8 @@ const meusProjetos = [
         linkDemo: "https://ju-franco.github.io/matsuno/",
         // Organizado dentro da subpasta matsuno
         imagens: ["matsuno/matsuno_inicio.jpg", "matsuno/matsuno_sobre.jpg", "matsuno/matsuno_produtos.jpg", "matsuno/matsuno_parceiros.jpg"], 
-        tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Fins Acadêmicos"],
-        corAccent: "var(--cor-acid)" 
+        tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Fins Acadêmicos"]
     }
 ];
 
-export default meusProjetos;
+window.meusProjetos = meusProjetos;

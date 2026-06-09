@@ -1,9 +1,14 @@
-import meusProjetos from './projetos.js';
+// ==========================================
+// 📄 LOGICA DE RENDERIZAÇÃO DOS PROJETOS
+// ==========================================
 
 const containerProjetos = document.getElementById('container-projetos');
 
 function renderizarProjetos() {
-    if (!containerProjetos) return;
+    // Busca a array global definida no window pelo arquivo projetos.js
+    const meusProjetos = window.meusProjetos;
+
+    if (!containerProjetos || !meusProjetos) return;
 
     containerProjetos.innerHTML = meusProjetos.map(projeto => {
         // Mapeia as tags com base nas regras de cores
@@ -21,10 +26,10 @@ function renderizarProjetos() {
         // Segurança extra: Garante que "imagens" é um array válido para evitar quebras
         const listaImagens = projeto.imagens || [];
 
-        // Molda os slides de imagens do carrossel interno
+        // Molda os slides de imagens do carrossel interno (Caminho relativo sem a barra inicial)
         const slidesHTML = listaImagens.map((img, index) => `
             <div class="carousel-slide ${index === 0 ? 'active' : ''}">
-                <img src="/static/img/${img}" alt="Tela ${index + 1} de ${projeto.titulo}">
+                <img src="static/img/${img}" alt="Tela ${index + 1} de ${projeto.titulo}">
             </div>
         `).join('');
 
@@ -125,54 +130,44 @@ function inicializarCarrosséis() {
     });
 }
 
-renderizarProjetos();
+// ==========================================
+// 🌗 LOGICA DE ALTERNAÇÃO DE TEMA (DARK/LIGHT)
+// ==========================================
 
 function inicializarMenuTema() {
-    // Procura pelo botão com a classe que você definiu no CSS
     const botaoTema = document.querySelector('.theme-toggle-btn');
-    
     if (!botaoTema) return;
 
-    // Recupera o tema salvo no navegador (se houver)
     const temaSalvo = localStorage.getItem('theme') || 'light';
-    
-    // Aplica o tema inicial no elemento <html> ou <body>
     document.documentElement.setAttribute('data-theme', temaSalvo);
     atualizarBotaoIcone(botaoTema, temaSalvo);
 
-    // Ouve o clique do usuário para alternar o estado
     botaoTema.addEventListener('click', () => {
         const temaAtual = document.documentElement.getAttribute('data-theme');
         const novoTema = temaAtual === 'dark' ? 'light' : 'dark';
 
-        // Modifica o atributo do HTML e salva a preferência
         document.documentElement.setAttribute('data-theme', novoTema);
         localStorage.setItem('theme', novoTema);
-        
-        // Atualiza visualmente o ícone do botão
         atualizarBotaoIcone(botaoTema, novoTema);
     });
 }
 
-// Altera o ícone do Boxicons baseado no tema ativo
 function atualizarBotaoIcone(botao, tema) {
     const icone = botao.querySelector('i');
     if (!icone) return;
 
     if (tema === 'dark') {
-        icone.className = 'bx bx-sun'; // Ícone de Sol para voltar pro modo claro
+        icone.className = 'bx bx-sun';
     } else {
-        icone.className = 'bx bx-moon'; // Ícone de Lua para ativar modo escuro
+        icone.className = 'bx bx-moon';
     }
 }
 
-// Executa a inicialização do tema assim que o arquivo carregar
-inicializarMenuTema();
+// ==========================================
+// 🔌 LOGICA DINÂMICA DO FOOTER_MATRIX
+// ==========================================
 
-
-// --- LOGICA DINÂMICA DO FOOTER_MATRIX ---
 function startFooterSystems() {
-    // 1. Relógio Interno Real
     const clockElement = document.getElementById('footer-clock');
     if (clockElement) {
         setInterval(() => {
@@ -182,7 +177,6 @@ function startFooterSystems() {
         }, 1000);
     }
 
-    // 2. Oscilação de Ping Fictícia (Efeito Terminal Ativo)
     const pingElement = document.getElementById('ping-shuttle');
     if (pingElement) {
         setInterval(() => {
@@ -192,5 +186,12 @@ function startFooterSystems() {
     }
 }
 
-// Inicializa quando o DOM estiver pronto
-document.addEventListener('DOMContentLoaded', startFooterSystems);
+// ==========================================
+// ⚡ INICIALIZAÇÃO GERAL DO SISTEMA
+// ==========================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderizarProjetos();
+    inicializarMenuTema();
+    startFooterSystems();
+});
